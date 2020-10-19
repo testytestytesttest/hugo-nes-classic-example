@@ -18,6 +18,12 @@ theme = "hugo-nes-classic"
     url = "/about/"
     weight = 10
 
+  [[menu.main]]
+    identifier = "post"
+    name = "Post"
+    url = "/post/"
+    weight = 10
+
 [taxonomies]
 category = "categories"
 tag = "tags"
