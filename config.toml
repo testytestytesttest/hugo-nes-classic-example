@@ -1,5 +1,5 @@
 ignoreFiles = ["content/posts/\\.*","content/portfolio/\\.*","content/product/\\.*","content/sketch/\\.*","content/en/\\.*","content/fr/\\.*"]
-baseURL = "https://gohugo.io/"
+baseURL = "https://testytestytesttest.github.io/"
 title = "Hugo Themes"
 author = "Steve Francia"
 copyright = "Copyright © 2008–2019, Steve Francia and the Hugo Authors; all rights reserved."
