@@ -1,18 +1,19 @@
-on: push
-name: Deploy to GitHub Organization Pages
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+    - master
+
 jobs:
-  filtersForGitHubActions:
-    name: Filters for GitHub Actions
+  hugo-deploy-gh-pages:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - name: Filters for GitHub Actions
-      uses: actions/bin/filter@master
-      with:
-        args: branch master
-    - name: hugo-deploy-gh-org-pages
-      uses: StevenACoffman/hugo-deploy-gh-org-pages@v1.0.3
+    - name: hugo-deploy-gh-pages
+      uses: testytestytesttest/hugo-nes-classic-example@master
       env:
-        DEPLOY_KEY_PRIVATE: ${{ secrets.HUGO }}
-        EMAIL: ${{ secrets.EMAIL }}
-        HUGO_VERSION: 0.68.3
+        GIT_DEPLOY_KEY: ${{ secrets.HUGO }}
+        HUGO_VERSION: "0.68.3"
+        WEBSITE_GIT: "git@github.com:testytestytesttest/testytestytesttest.github.io.git"
+        WEBSITE_DIR: "testytestytesttest.github.io"
