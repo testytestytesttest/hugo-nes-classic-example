@@ -11,7 +11,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: hugo-deploy-gh-pages
-      uses: testytestytesttest/hugo-nes-classic-example@master
+      uses: linuxsuren/surenpi@master
       env:
         GIT_DEPLOY_KEY: ${{ secrets.HUGO }}
         HUGO_VERSION: "0.68.3"
