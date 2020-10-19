@@ -1,19 +1,19 @@
-name: Deploy to GitHub Pages
+name: Deploy to Remote Branch
 
 on:
   push:
     branches:
-    - master
-
+      - master
+      
 jobs:
   hugo-deploy-gh-pages:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
     - name: hugo-deploy-gh-pages
-      uses: linuxsuren/surenpi@master
+      uses: khanhicetea/gh-actions-hugo-deploy-gh-pages@master
       env:
+        GITHUB_REMOTE_REPOSITORY: "testytestytesttest/testytestytesttest.github.io"
+        GITHUB_BRANCH: master
         GIT_DEPLOY_KEY: ${{ secrets.HUGO }}
         HUGO_VERSION: "0.68.3"
-        WEBSITE_GIT: "git@github.com:testytestytesttest/testytestytesttest.github.io.git"
-        WEBSITE_DIR: "testytestytesttest.github.io"
